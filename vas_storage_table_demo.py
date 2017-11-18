@@ -71,10 +71,10 @@ car = Entity()
 car.PartitionKey = 'carinventory'
 car.RowKey = '001'
 car.price = 48100
-car.make = Volvo
-car.model = S90
+car.make = 'Volvo'
+car.model = 'S90'
 car.year = 2017
-car.color = Silver
+car.color = 'Silver'
 table_service.insert_entity('itemstable', car)
 print('Created entry for Volvo...')
 
@@ -82,10 +82,10 @@ car = Entity()
 car.PartitionKey = 'carinventory'
 car.RowKey = '002'
 car.price = 44450
-car.make = BMW
-car.model = i3
+car.make = 'BMW'
+car.model = 'i3'
 car.year = 2018
-car.color = White
+car.color = 'White'
 table_service.insert_entity('itemstable', car)
 print('Created entry for BMW...')
 
@@ -93,10 +93,10 @@ car = Entity()
 car.PartitionKey = 'carinventory'
 car.RowKey = '003'
 car.price = 52950
-car.make = Mercedes
-car.model = E300
+car.make = 'Mercedes'
+car.model = 'E300'
 car.year = 2016
-car.color = Black
+car.color = 'Black'
 table_service.insert_entity('itemstable', car)
 print('Created entry for Mercedes...')
 
@@ -110,7 +110,7 @@ coffee.RowKey = '004'
 coffee.brand = 'Columbian'
 coffee.flavor = 'Dark Roast'
 coffee.price = 2.99
-coffee.size = Small
+coffee.size = 'Small'
 table_service.insert_entity('itemstable', coffee)
 print('Created entry for a Columbian Coffee...\n')
 time.sleep(1)
@@ -121,7 +121,7 @@ coffee.RowKey = '005'
 coffee.brand = 'Indian'
 coffee.flavor = 'Mediam Roast'
 coffee.price = 5.99
-coffee.size = Medium
+coffee.size = 'Medium'
 table_service.insert_entity('itemstable', coffee)
 print('Created entry for a Indian Coffee...\n')
 time.sleep(1)
