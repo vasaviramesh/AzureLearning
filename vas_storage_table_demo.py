@@ -94,7 +94,7 @@ car.PartitionKey = 'carinventory'
 car.RowKey = '003'
 car.price = 52950
 car.make = Mercedes
-car.model = E 300
+car.model = E300
 car.year = 2016
 car.color = Black
 table_service.insert_entity('itemstable', car)
@@ -105,7 +105,7 @@ print('Created entry for Mercedes...')
 # These two properties are used as a primary key to index the Table. This makes queries much quicker.
 
 coffee = Entity()
-coffee.PartitionKey = 'coffeestore'
+coffee.PartitionKey = 'coffeeshop'
 coffee.RowKey = '004'
 coffee.brand = 'Columbian'
 coffee.flavor = 'Dark Roast'
@@ -116,7 +116,7 @@ print('Created entry for a Columbian Coffee...\n')
 time.sleep(1)
 
 coffee = Entity()
-coffee.PartitionKey = 'coffeestore'
+coffee.PartitionKey = 'coffeeshop'
 coffee.RowKey = '005'
 coffee.brand = 'Indian'
 coffee.flavor = 'Mediam Roast'
