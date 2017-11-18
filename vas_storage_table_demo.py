@@ -129,15 +129,17 @@ time.sleep(1)
 ###
 # Use the Azure Storage Storage SDK for Python to query for entities in our Table
 ###
-print('With some data in our Azure Storage Table, we can query the data.\nLet\'s see what the pizza menu looks like.')
+print('With some data in our Azure Storage Table, we can query the data.\nLet\'s see what the coffee shop menu looks like.')
 raw_input('Press Enter to continue...')
 
 # In this query, you define the partition key to search within, and then which properties to retrieve
 # Structuring queries like this improves performance as your application scales up and keeps the queries efficient
-items = table_service.query_entities('itemstable', filter="PartitionKey eq 'pizzamenu'", select='description,cost')
+items = table_service.query_entities('itemstable', filter="PartitionKey eq 'coffeeshop'", select='brand,flavor,price,size')
 for item in items:
-    print('Name: ' + item.description)
-    print('Cost: ' + str(item.cost) + '\n')
+    print('Name: ' + item.brand)
+    print('Flavor: ' + str(item.flavor) + '\n')
+    print('Size: ' + str(item.size) + '\n')
+    print('Cost: ' + str(item.price) + '\n')
 
 items = table_service.query_entities('itemstable', filter="PartitionKey eq 'clothingstore'", select='description,price')
 for item in items:
